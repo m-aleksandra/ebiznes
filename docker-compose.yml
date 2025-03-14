@@ -1,0 +1,7 @@
+version: '3'
+
+services: 
+  gradleapp:
+    build: .
+    container_name: gradle_application
+    command: bash -c "source /root/.sdkman/bin/sdkman-init.sh && gradle run --warning-mode all"
