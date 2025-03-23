@@ -1,6 +1,0 @@
-version: '3'
-
-services: 
-  gradleapp:
-    build: .
-    container_name: gradle_application
