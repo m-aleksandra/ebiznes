@@ -1,0 +1,4 @@
+package models
+
+case class Product(id: Long, name: String, price: Double, categoryId: Long)
+
