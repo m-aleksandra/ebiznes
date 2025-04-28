@@ -1,3 +1,6 @@
+val ktorVersion = "2.3.11"
+val kordVersion = "0.10.0"
+
 plugins {
     kotlin("jvm") version "1.9.0"
     application
@@ -8,13 +11,16 @@ repositories {
 }
 
 dependencies {
-    implementation("io.ktor:ktor-server-netty:2.3.4")
-    implementation("io.ktor:ktor-server-core:2.3.4")
-    implementation("io.ktor:ktor-client-cio:2.3.4")
-    implementation("dev.kord:kord-core:0.10.0") 
-    implementation("ch.qos.logback:logback-classic:1.4.11")
+    implementation("dev.kord:kord-core:$kordVersion")
+    implementation("io.ktor:ktor-server-core:$ktorVersion")
+    implementation("io.ktor:ktor-server-netty:$ktorVersion")
+    implementation("ch.qos.logback:logback-classic:1.4.14")
 }
 
 application {
-    mainClass.set("MainKt")
+    mainClass.set("MainKt")  
+}
+
+kotlin {
+    jvmToolchain(16)
 }
