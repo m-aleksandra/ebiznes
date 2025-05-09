@@ -1,7 +1,12 @@
 import dev.kord.core.Kord
 import dev.kord.core.event.message.MessageCreateEvent
 import dev.kord.core.on
-import kotlinx.coroutines.runBlocking
+import io.ktor.server.engine.*
+import io.ktor.server.netty.*
+import io.ktor.server.application.*
+import io.ktor.server.response.*
+import io.ktor.server.routing.*
+import kotlinx.coroutines.*
 
 val planZajec = mapOf(
     "poniedziałek" to listOf(
@@ -26,11 +31,34 @@ val planZajec = mapOf(
 )
 
 fun main() = runBlocking {
-    val token = System.getenv("DISCORD_TOKEN") ?: error("Brak DISCORD_TOKEN w zmiennych środowiskowych.")
+    val token = System.getenv("DISCORD_TOKEN") ?: error("No DISCORD_TOKEN!")
 
-    val client = Kord(token)
+    val kord = Kord(token)
+    launch {
+        embeddedServer(Netty, port = 8080) {
+            routing {
+                get("/") {
+                    call.respondText("Bot działa! 🚀")
+                }
+                get("/plan/{dzien}") {
+                    val dzien = call.parameters["dzien"]?.lowercase()
+                    if (dzien != null) {
+                        val plan = planZajec[dzien]
+                        if (plan != null) {
+                            val response = plan.joinToString("\n") { "- $it" }
+                            call.respondText("📅 Plan na ${dzien.capitalize()}:\n$response")
+                        } else {
+                            call.respondText("Brak planu na ten dzień.", status = io.ktor.http.HttpStatusCode.NotFound)
+                        }
+                    } else {
+                        call.respondText("Podaj dzień tygodnia w URL.")
+                    }
+                }
+            }
+        }.start(wait = false)
+    }
 
-    client.on<MessageCreateEvent> {
+    kord.on<MessageCreateEvent> {
         val content = message.content.lowercase()
 
         if (message.author?.isBot == true) return@on
@@ -54,5 +82,5 @@ fun main() = runBlocking {
         }
     }
 
-    client.login()
+    kord.login()
 }
