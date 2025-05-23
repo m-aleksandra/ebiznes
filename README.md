@@ -69,3 +69,17 @@
 :x: 4.5 wymaganie 4
 
 :x: 5.0 wymaganie 5 
+
+**Zadanie 6** 
+
+:white_check_mark: 3.0 wymaganie 1 [Link](https://github.com/m-aleksandra/ebiznes/commit/0b715a05b4633061b81d06ded783e24c7871946f)
+
+:x: 3.5 wymaganie 2
+
+:x: 4.0 wymaganie 3
+
+:x: 4.5 wymaganie 4
+
+:x: 5.0 wymaganie 5 
+
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=m-aleksandra_ebiznes&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=m-aleksandra_ebiznes)
