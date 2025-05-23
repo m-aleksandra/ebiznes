@@ -57,3 +57,15 @@
 :white_check_mark: 4.5 wymaganie 4 [Link](https://github.com/m-aleksandra/ebiznes/commit/a8d77e7e43d20d262c082ccb6ab5fb21f6373bc6)
 
 :white_check_mark: 5.0 wymaganie 5 [Link](https://github.com/m-aleksandra/ebiznes/commit/a8d77e7e43d20d262c082ccb6ab5fb21f6373bc6)
+
+**Zadanie 6** 
+
+:white_check_mark: 3.0 wymaganie 1 [Link](https://github.com/m-aleksandra/ebiznes/commit/1aec55162c5c27767deddb8c62815d654a017412)
+
+:white_check_mark: 3.5 wymaganie 2 [Link](https://github.com/m-aleksandra/ebiznes/commit/1aec55162c5c27767deddb8c62815d654a017412)
+
+:x: 4.0 wymaganie 3
+
+:x: 4.5 wymaganie 4
+
+:x: 5.0 wymaganie 5 
