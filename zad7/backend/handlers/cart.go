@@ -1,10 +1,10 @@
 package handlers
 
 import (
-	"net/http"
-	"strconv"
 	"backend/models"
 	"github.com/gin-gonic/gin"
+	"net/http"
+	"strconv"
 )
 
 var (
@@ -95,7 +95,7 @@ func RemoveItemFromCart(c *gin.Context) {
 	for _, item := range cart.Items {
 		if item.ProductID == productID {
 			removed = true
-			continue 
+			continue
 		}
 		newItems = append(newItems, item)
 	}

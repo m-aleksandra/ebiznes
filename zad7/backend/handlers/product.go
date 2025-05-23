@@ -2,19 +2,19 @@ package handlers
 
 import (
 	"backend/models"
+	"github.com/gin-gonic/gin"
 	"net/http"
 	"strconv"
-	"github.com/gin-gonic/gin"
 )
 
 var products = []models.Product{
-    {ID: 1, Name: "Coffee", Price: 9.99},
-    {ID: 2, Name: "Tea", Price: 4.99},
-    {ID: 3, Name: "Juice", Price: 5.49},
+	{ID: 1, Name: "Coffee", Price: 9.99},
+	{ID: 2, Name: "Tea", Price: 4.99},
+	{ID: 3, Name: "Juice", Price: 5.49},
 }
 
 func GetProducts(c *gin.Context) {
-    c.IndentedJSON(http.StatusOK, products)
+	c.IndentedJSON(http.StatusOK, products)
 }
 
 func GetProductByID(c *gin.Context) {
@@ -28,4 +28,3 @@ func GetProductByID(c *gin.Context) {
 	}
 	c.JSON(http.StatusNotFound, gin.H{"error": "Product not found"})
 }
-

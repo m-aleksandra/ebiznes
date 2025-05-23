@@ -1,9 +1,9 @@
 package handlers
 
 import (
-	"net/http"
 	"backend/models"
 	"github.com/gin-gonic/gin"
+	"net/http"
 )
 
 func ProcessPayment(c *gin.Context) {
@@ -26,10 +26,10 @@ func ProcessPayment(c *gin.Context) {
 	}
 
 	c.JSON(http.StatusOK, gin.H{
-		"message":  "Payment processed successfully",
-		"cartId":   payment.CartID,
-		"total":    calculateCartTotal(cart),
-		"last4":    payment.CardNumber[len(payment.CardNumber)-4:],
+		"message": "Payment processed successfully",
+		"cartId":  payment.CartID,
+		"total":   calculateCartTotal(cart),
+		"last4":   payment.CardNumber[len(payment.CardNumber)-4:],
 	})
 }
 

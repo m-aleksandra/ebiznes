@@ -1,23 +1,23 @@
 package main
 
 import (
-    "github.com/gin-gonic/gin"
-    "github.com/gin-contrib/cors"
-    "backend/handlers"
+	"backend/handlers"
+	"github.com/gin-contrib/cors"
+	"github.com/gin-gonic/gin"
 )
 
 func main() {
-    r := gin.Default()
+	r := gin.Default()
 
-    r.Use(cors.New(cors.Config{
-        AllowOrigins:     []string{"*"},
-        AllowMethods:     []string{"GET", "POST", "PATCH", "PUT"},
-        AllowHeaders:     []string{"Origin", "Content-Type"},
-        AllowCredentials: true,
-    }))
+	r.Use(cors.New(cors.Config{
+		AllowOrigins:     []string{"*"},
+		AllowMethods:     []string{"GET", "POST", "PATCH", "PUT"},
+		AllowHeaders:     []string{"Origin", "Content-Type"},
+		AllowCredentials: true,
+	}))
 
-    r.GET("/api/products", handlers.GetProducts)
-    r.GET("/api/products/:id", handlers.GetProductByID)
+	r.GET("/api/products", handlers.GetProducts)
+	r.GET("/api/products/:id", handlers.GetProductByID)
 	r.POST("/api/cart", handlers.CreateCart)
 	r.GET("/api/cart/:id", handlers.GetCart)
 	r.POST("/api/cart/:id/add", handlers.AddToCart)
@@ -25,5 +25,5 @@ func main() {
 	r.DELETE("/api/cart/:id/item/:productId", handlers.RemoveItemFromCart)
 	r.POST("/api/payment", handlers.ProcessPayment)
 
-    r.Run(":8080")
+	r.Run(":8080")
 }
