@@ -82,3 +82,14 @@
 
 :x: 5.0 wymaganie 5 
 
+**Zadanie 8** 
+
+:white_check_mark: 3.0 wymaganie 1 [Link](https://github.com/m-aleksandra/ebiznes/commit/47f22be35c30915118bd912bbc0f580b0f7ded39)
+
+:white_check_mark: 3.5 wymaganie 2 [Link](https://github.com/m-aleksandra/ebiznes/commit/47f22be35c30915118bd912bbc0f580b0f7ded39)
+
+:x: 4.0 wymaganie 3
+
+:x: 4.5 wymaganie 4
+
+:x: 5.0 wymaganie 5 
