@@ -93,3 +93,28 @@
 :x: 4.5 wymaganie 4
 
 :x: 5.0 wymaganie 5 
+
+
+**Zadanie 9** 
+
+:white_check_mark: 3.0 wymaganie 1 [Link](https://github.com/m-aleksandra/ebiznes/commit/6d2c4a2b92fcbe9c9106b20120979e9b6924deab)
+
+:white_check_mark: 3.5 wymaganie 2 [Link](https://github.com/m-aleksandra/ebiznes/commit/6d2c4a2b92fcbe9c9106b20120979e9b6924deab)
+
+:x: 4.0 wymaganie 3
+
+:x: 4.5 wymaganie 4
+
+:x: 5.0 wymaganie 5 
+
+**Zadanie 9** 
+
+:white_check_mark: 3.0 wymaganie 1 [Link](https://github.com/m-aleksandra/ebiznes/commit/61cbf982d24faa957c67008afcacee5ab2354a52)
+
+:x: 3.5 wymaganie 2
+
+:x: 4.0 wymaganie 3
+
+:x: 4.5 wymaganie 4
+
+:x: 5.0 wymaganie 5 
