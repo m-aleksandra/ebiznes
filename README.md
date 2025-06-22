@@ -107,7 +107,7 @@
 
 :x: 5.0 wymaganie 5 
 
-**Zadanie 9** 
+**Zadanie 10** 
 
 :white_check_mark: 3.0 wymaganie 1 [Link](https://github.com/m-aleksandra/ebiznes/commit/61cbf982d24faa957c67008afcacee5ab2354a52)
 
